@@ -1,0 +1,24 @@
+
+export function Logo() {
+  return (
+    <svg
+      xmlns="http://www.w.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="hsl(var(--primary))"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-calculator"
+    >
+      <rect width="16" height="20" x="4" y="2" rx="2" />
+      <line x1="8" x2="16" y1="6" y2="6" />
+      <line x1="16" x2="16" y1="14" y2="18" />
+      <line x1="16" x2="12" y1="14" y2="14" />
+      <line x1="12" x2="12" y1="14" y2="18" />
+      <line x1="8" x2="8" y1="14" y2="18" />
+    </svg>
+  );
+}
