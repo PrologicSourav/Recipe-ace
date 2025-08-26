@@ -66,7 +66,12 @@ const recipeSearchFlow = ai.defineFlow(
     outputSchema: RecipeSearchOutputSchema,
   },
   async input => {
-    const {output} = await recipeSearchPrompt(input);
-    return output!;
+    try {
+      const {output} = await recipeSearchPrompt(input);
+      return output!;
+    } catch (error) {
+      console.error('Error during recipe search API call:', error);
+      throw error; // Re-throw the error so the client still receives an error response
+    }
   }
 );
